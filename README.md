@@ -4,8 +4,8 @@
 
 ### :scroll: INTEGRANTES 
 - Grajeda juliana Gimena
-* Lopez Camilo Brayan
-+ Loroño Fernando Luis
+* Lopez Camilo Garcia
++ Loroño Luis Fernando
 
 ## Proyecto Parte Uno: Contador 0 al 99
 ![imagen](imagen/aaa.png)
@@ -18,4 +18,7 @@
 
 ## Proyecto Parte Dos: Contador + Switch de cambio
 
+### 	:computer: Código del Circuito
+
+### Descripción
 
