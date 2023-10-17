@@ -1,5 +1,5 @@
-# TIKERCAD_SPD
-Parcial de SPD
+# Primer Parcial de SPD
+
 
 # INTEGRANTES
 Grajeda juliana Gimena
