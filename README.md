@@ -1,7 +1,10 @@
-# Primer Parcial de SPD
+# :file_folder: Primer Parcial de SPD
 
 
-## INTEGRANTES 
--Grajeda juliana Gimena
-*Lopez Camilo Brayan
-+Loroño Fernando Luis
+### :scroll: INTEGRANTES 
+- Grajeda juliana Gimena
+* Lopez Camilo Brayan
++ Loroño Fernando Luis
+
+# 	:computer: Código del Circuito
+[Tinkercad](https://www.tinkercad.com/things/5K5WYnyHAHB)
