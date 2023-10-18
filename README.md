@@ -3,9 +3,9 @@
 ![imagen](imagen/3_Figura_1._Tinkercad_logotipo.jpg)
 
 ### :scroll: INTEGRANTES 
-- 🍓 Grajeda juliana Gimena
-* 🍝 Lopez Camilo Garcia
-+ 🐗 Loroño Luis Fernando
+-  Grajeda juliana Gimena
+*  Lopez Camilo Garcia
++  Loroño Luis Fernando
 
 ## 📖 Proyecto Parte Uno: Contador 0 al 99
 ![imagen](imagen/aaa.png)
@@ -18,7 +18,7 @@
 
 
 
-## 📖 Proyecto Parte Dos: Contador + Interruptor deslizante(SWITCH)
+##  Proyecto Parte Dos: Contador + Interruptor deslizante(SWITCH)
 ![imagen](imagen/imagen_2023-10-18_161343051.png)
 
 ### 	:computer: Link al Proyecto
