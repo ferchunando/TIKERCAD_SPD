@@ -20,5 +20,8 @@
 
 ### 	:computer: Código del Circuito
 
+[Tinkercard](https://www.tinkercad.com/things/0jGSMg5g407)
+
 ### Descripción
 
+> Este es un código parecido al anterior solo que ahora tiene un interruptor deslizante que te permite optar por mostrar únicamente numeros primos o contar en el orden correcto
