@@ -27,3 +27,30 @@
 
 > Este es un código parecido al anterior solo que ahora tiene un interruptor deslizante que te permite optar por mostrar únicamente numeros primos o contar en el orden correcto
 
+## INVESTIGACIÓN
+
+### MOTOR DE CC
+
+#### Definición
+> sd
+
+### MOTOR DE AFICIONADO
+
+#### Definición
+> asd
+
+### SENSOR DE FLEXIÓN
+
+#### Definición
+>asd
+
+### SENSOR DE FUERZA
+
+#### Definición
+>asd
+
+### SENSOR DE TEMPERATURA
+
+#### Definicón
+>asd
+
