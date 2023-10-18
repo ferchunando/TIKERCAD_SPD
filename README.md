@@ -7,7 +7,7 @@
 *  Lopez Camilo Garcia
 +  Loroño Luis Fernando
 
-## 📖 Proyecto Parte Uno: Contador 0 al 99
+##  Proyecto Parte Uno: Contador 0 al 99
 ![imagen](imagen/aaa.png)
 
 ### 	:computer: Link al Proyecto
