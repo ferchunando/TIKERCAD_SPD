@@ -1,3 +1,15 @@
+/*
+------------------------CONSIGNA PRIMER PARCIAL--------------------------
+
+Diseñar un contador de 0 a 99 utilizando dos displays de 7 segmentos y tres botones para
+controlar la cuenta. Debes implementar la técnica de multiplexación para mostrar los dígitos
+en los displays. El contador debe comenzar en 0 y debe ser capaz de aumentar o disminuir
+su valor en una unidad con los botones.
+
+-------------------------------------------------------------------------
+*/
+
+
 #define A 10
 #define B 11
 #define C 5
