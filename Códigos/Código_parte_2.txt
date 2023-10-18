@@ -1,0 +1,306 @@
+/*
+------------------------CONSIGNA SEGUNDO PARCIAL--------------------------
+
+Modifica el proyecto de la Parte 1 de la siguiente manera:
+1. Sustituye uno de los botones por un interruptor deslizante (switch) de dos posiciones.
+Dependiendo de la posición del interruptor, el display debe mostrar o bien el contador (como
+en la Parte 1) o los números primos en el rango de 0 a 99.
+
+-------------------------------------------------------------------------
+*/
+
+#define A 10
+#define B 11
+#define C 5
+#define D 6
+#define E 7
+#define F 9
+#define G 8
+#define SUBE 3
+#define BAJA 2
+#define RESET 4
+#define UNIDAD A4
+#define DECENA A5
+#define APAGADOS 0
+#define TIMEDISPLAYON 8
+#define INTERRUPTOR 13
+
+int contador = 0; 
+int estadoSube;
+int estadoBaja;
+int estadoReset;
+
+int subePrevia;
+int bajaPrevia;
+int resetPrevia;
+
+int estado_interruptor;
+int contador_primo;
+
+int i;
+int c = 0;
+
+void setup()
+{
+    pinMode(A, OUTPUT);
+    pinMode(B, OUTPUT);
+    pinMode(C, OUTPUT);
+    pinMode(D, OUTPUT);
+    pinMode(E, OUTPUT);
+    pinMode(F, OUTPUT);
+    pinMode(G, OUTPUT);
+    pinMode(SUBE, INPUT_PULLUP);
+    pinMode(BAJA, INPUT_PULLUP);
+    pinMode(RESET, INPUT_PULLUP);
+    pinMode(UNIDAD, OUTPUT);
+    pinMode(DECENA, OUTPUT);
+  	pinMode(INTERRUPTOR, INPUT);
+    digitalWrite(UNIDAD, 0);
+    digitalWrite(DECENA, 0);
+    printDigit(0);
+  	Serial.begin(9600);
+}
+
+void loop()
+{
+    int pressed = keypresset();
+ 
+    if (pressed == SUBE)
+    {
+      contador ++;
+      Serial.print(contador);
+      if (contador > 99)
+        contador = 0;
+    }
+  
+    if (pressed == BAJA)
+    {
+      contador --;
+      if (contador < 0)
+          contador = 99;
+    }
+    
+  	if (pressed == RESET)
+    {
+      contador = 0;
+    }
+    
+    estado_interruptor = digitalRead(INTERRUPTOR);
+  
+  	//CONTADOR
+  	if (estado_interruptor == LOW)
+    {
+      printCount(contador);
+    }
+  
+    //NÚMEROS PRIMOS
+  	if (estado_interruptor == HIGH)
+    {
+      calcular_primos(contador);
+    }
+
+}
+
+//MUESTRA EL CONTADOR
+void printCount (int numero)
+{ 
+  printDigit(numero - 10 * int(numero/10));
+  prendeDigito(UNIDAD);
+  prendeDigito(APAGADOS);
+  
+  printDigit(numero/10);
+  prendeDigito(DECENA);
+  prendeDigito(APAGADOS);
+
+}
+
+void calcular_primos(int numero)
+{
+  int c = 0; // Reinicia el contador de divisores
+  for (int i = 2; i < numero; i++)
+  {
+    if (numero % i == 0)
+    {
+      c++;
+      break; // Si es divisible por algún número, no es primo, así que sal del bucle.
+    }
+  }
+
+  if (c == 0)
+  {
+    printCount(numero);
+  }
+}
+
+//SEPARA UNIDAD DE DECENA
+void prendeDigito(int digito) 
+{
+    if (digito == UNIDAD)
+    {
+        digitalWrite(UNIDAD, LOW);
+        digitalWrite(DECENA, HIGH);
+      delay(1);
+    }
+    else if (digito == DECENA)
+    {
+        digitalWrite(UNIDAD, HIGH);
+        digitalWrite(DECENA, LOW);
+        delay(1);
+    }
+
+    else
+    {
+    digitalWrite(UNIDAD, HIGH);
+    digitalWrite(DECENA, HIGH);
+    }
+}
+
+//ANTI-REBOTE
+int keypresset(void)
+{
+    estadoSube = digitalRead(SUBE);
+    estadoBaja = digitalRead(BAJA);
+    estadoReset = digitalRead(RESET);
+    if (estadoSube)
+    {
+    subePrevia = 1;
+    }
+    if (estadoBaja)
+    {
+    bajaPrevia = 1;
+    }
+    if (estadoReset)
+    {
+    resetPrevia = 1;
+    }
+
+      if (estadoSube == 0 && estadoSube != subePrevia)
+      {
+        subePrevia = estadoSube;
+        return SUBE;
+      }
+      if(estadoBaja == 0 && estadoBaja != bajaPrevia)
+      {
+        bajaPrevia = estadoBaja;
+        return BAJA;
+      }
+      if (estadoReset == 0 && estadoReset != resetPrevia)
+      {
+        resetPrevia = estadoReset; 
+        return RESET;
+      }
+return 0;
+}
+
+//NUMEROS EN LED
+void printDigit(int digit)
+{
+  digitalWrite(A, LOW);
+  digitalWrite(B, LOW);
+  digitalWrite(C, LOW);
+  digitalWrite(D, LOW);
+  digitalWrite(E, LOW);
+  digitalWrite(F, LOW);
+  digitalWrite(G, LOW);
+    switch (digit) {
+        case 0:
+            digitalWrite(A, HIGH);
+			digitalWrite(B, HIGH);
+			digitalWrite(C, HIGH);
+			digitalWrite(D, HIGH);
+			digitalWrite(E, HIGH);
+			digitalWrite(F, HIGH);
+			digitalWrite(G, LOW);
+            break;
+    
+        case 1:
+            digitalWrite(A, LOW);
+			digitalWrite(B, HIGH);
+			digitalWrite(C, HIGH);
+			digitalWrite(D, LOW);
+			digitalWrite(E, LOW);
+			digitalWrite(F, LOW);
+			digitalWrite(G, LOW);
+			break;
+    
+        case 2:
+            digitalWrite(A, HIGH);
+			digitalWrite(B, HIGH);
+			digitalWrite(C, LOW);
+			digitalWrite(D, HIGH);
+			digitalWrite(E, HIGH);
+			digitalWrite(F, LOW);
+			digitalWrite(G, HIGH);
+			break;
+    
+        case 3:
+            digitalWrite(A, HIGH);
+			digitalWrite(B, HIGH);
+			digitalWrite(C, HIGH);
+			digitalWrite(D, HIGH);
+			digitalWrite(E, LOW);
+			digitalWrite(F, LOW);
+			digitalWrite(G, HIGH);
+            break;
+    
+        case 4:
+            digitalWrite(A, LOW);
+			digitalWrite(B, HIGH);
+			digitalWrite(C, HIGH);
+			digitalWrite(D, LOW);
+			digitalWrite(E, LOW);
+			digitalWrite(F, HIGH);
+			digitalWrite(G, HIGH);
+			break;
+    
+        case 5:
+            digitalWrite(A, HIGH);
+			digitalWrite(B, LOW);
+			digitalWrite(C, HIGH);
+			digitalWrite(D, HIGH);
+			digitalWrite(E, LOW);
+			digitalWrite(F, HIGH);
+			digitalWrite(G, HIGH);
+			break;
+    
+        case 6:
+            digitalWrite(A, HIGH);
+			digitalWrite(B, LOW);
+			digitalWrite(C, HIGH);
+			digitalWrite(D, HIGH);
+			digitalWrite(E, HIGH);
+			digitalWrite(F, HIGH);
+			digitalWrite(G, HIGH);
+			break;
+    
+        case 7:
+            digitalWrite(A, HIGH);
+			digitalWrite(B, HIGH);
+			digitalWrite(C, HIGH);
+			digitalWrite(D, LOW);
+			digitalWrite(E, LOW);
+			digitalWrite(F, LOW);
+			digitalWrite(G, LOW);
+			break;
+
+        case 8:
+            digitalWrite(A, HIGH);
+			digitalWrite(B, HIGH);
+			digitalWrite(C, HIGH);
+			digitalWrite(D, HIGH);
+			digitalWrite(E, HIGH);
+			digitalWrite(F, HIGH);
+			digitalWrite(G, HIGH);
+			break;
+    
+        case 9:
+            digitalWrite(A, HIGH);
+			digitalWrite(B, HIGH);
+			digitalWrite(C, HIGH);
+			digitalWrite(D, HIGH);
+			digitalWrite(E, LOW);
+			digitalWrite(F, HIGH);
+			digitalWrite(G, HIGH);
+			break;
+        }
+}
