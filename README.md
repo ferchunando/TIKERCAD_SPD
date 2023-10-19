@@ -82,3 +82,8 @@ Los sensores de flexión se utilizan en una variedad de aplicaciones, incluyendo
 #### Definicón
 >  Un sensor de temperatura es un equipo diseñado para medir la temperatura, para ello trasforma el valor de la temperatura en una señal eléctrica para que pueda ser leída sin dificultad. Estos dispositivos también son conocidos con el nombre de termosensor o sonda de temperatura.
 
+### SENSOR DE LUZ AMBIENTAL
+
+### Definición
+> Es un dispositivo que se utiliza para medir los niveles de luz en el entorno circundante. Estos sensores son capaces de detectar la intensidad de la luz visible presente en un lugar específico y convertirla en una señal eléctrica que puede ser utilizada por otros dispositivos electrónicos.
+
