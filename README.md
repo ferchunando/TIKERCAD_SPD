@@ -38,14 +38,15 @@
 
 ### 	:computer: Link al Proyecto
 
-[Tinkercard](https://www.tinkercad.com/things/gWfCbkDtlCq)
+[Tinkercard](https://www.tinkercad.com/things/gtKSZaV5XEU)
 
 ### Descripción
 
 >**note**
 > En este código agregamos un motor de CC, una placa de pruebas pequeña y un transistor npn
 
-
+Agregamos un moptor con la única funcionadidad de encenderse cuadno en los leds se muestre un número diferente a 0 y que se apague cuando vuelva a 0(gracias al botón reiniciar). Para realizar esta
+función, utilizamos un transistor con el fin de medir el flujo de energía otorgado al motor.
 
 ### MULTIPLEXACIÓN
 ![image](imagen/imagen_2023-10-18_230358769.png)
