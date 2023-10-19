@@ -18,7 +18,6 @@
 
 >**note**
 > En ambos codigos utilizamos multiplexación para permitirnos encender los leds de los dos displays a través de la misma conexión de cables.
-> ![image]()
 
 ##  :sunflower: Proyecto Parte Dos: Contador + Interruptor deslizante(SWITCH)
 ![imagen](imagen/imagen_2023-10-18_161343051.png)
@@ -33,6 +32,29 @@
 
 ## INVESTIGACIÓN
 
+## Proyecto Parte Dos: Mejoras en el código + Motor + Sensor
+
+![imagen](imagen/imagen_2023-10-19_005356986.png)
+
+### 	:computer: Link al Proyecto
+
+[Tinkercard](https://www.tinkercad.com/things/gWfCbkDtlCq)
+
+### Descripción
+
+>**note**
+> En este código agregamos un motor de CC, una placa de pruebas pequeña y un transistor npn
+
+
+
+### MULTIPLEXACIÓN
+![image](imagen/imagen_2023-10-18_230358769.png)
+
+>**note**
+> La multiplexación es un proceso en el que se comparten recursos o canales para transmitir múltiples señales o datos a través de un medio limitado o una ruta de comunicación. Este proceso permite la transmisión eficiente de información desde varias fuentes a un destino utilizando una única ruta o canal. 
+
+Basado en la definición de la palabra "Multiplexación" y la aplicación dentro del programa, podemos decir que la misma se utiliza para definir la conexión unica entre varios dispositivos a los mismos pines de entrada/salida. Esto permite la transmisión eficiente de información desde una fuente (el microcontrolador) a múltiples destinos (los displays) utilizando una única ruta o conjunto de pines de control. 
+
 ### MOTOR DE CC
 
 #### Definición
@@ -41,7 +63,7 @@
 ### MOTOR DE AFICIONADO
 
 #### Definición
-> asd
+> Un motor DC (corriente continua) es un tipo de motor eléctrico que convierte la energía eléctrica de corriente continua en energía mecánica para realizar trabajo, como girar un eje o una rueda. Estos motores son ampliamente utilizados en una variedad de aplicaciones debido a su simplicidad y facilidad de control.
 
 ### SENSOR DE FLEXIÓN
 
