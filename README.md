@@ -32,7 +32,7 @@
 ### MOTOR DE CC
 
 #### Definición
-> sd
+> Motor CC: Los motores de corriente continua a menudo se usan con una caja de engranajes para aumentar el torque mientras se mantienen las pequeñas dimensiones. El motor DC es bastante simple de usar. Para que funcione, lo único que hay que hacer es aplicarle voltaje. La señal y el nivel de voltaje determinarán la velocidad y la dirección de rotación.
 
 ### MOTOR DE AFICIONADO
 
@@ -42,15 +42,16 @@
 ### SENSOR DE FLEXIÓN
 
 #### Definición
->asd
+>  los sensores de corte y flexión, son unos dispositivos que se instalan en las líneas de alambre . Esto con la finalidad de que emitan una señal si se produce algún cambio en la tensión de las líneas; como, por ejemplo, si son, presionadas, aflojadas o simplemente cortadas.
+Los sensores de flexión se utilizan en una variedad de aplicaciones, incluyendo: Robótica, dispositivos medicos, interfaces humano-maquina, control de videojuegos, monitoreo de estructuras, protecis y ortesis, etc.
 
 ### SENSOR DE FUERZA
 
 #### Definición
->asd
+> Los sensores de fuerza, o células de carga, son dispositivos que nos permiten obtener una señal eléctrica proporcional a la fuerza que se aplica sobre ellos. Estos transductores se presentan en múltiples formatos, ya que los requisitos mecánicos de los sistemas en los que se integran son también muy variados
 
 ### SENSOR DE TEMPERATURA
 
 #### Definicón
->asd
+>  Un sensor de temperatura es un equipo diseñado para medir la temperatura, para ello trasforma el valor de la temperatura en una señal eléctrica para que pueda ser leída sin dificultad. Estos dispositivos también son conocidos con el nombre de termosensor o sonda de temperatura.
 
