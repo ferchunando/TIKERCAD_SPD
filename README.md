@@ -16,6 +16,10 @@
 ### Descripción
 > Este es el código de un circuito que, gracias a sus botones, puede contar del 0 al 99 y viceversa. Además, cuenta con un botón que te permite resetear el contador a 0 en caso de querer volver a empezar
 
+>**note**
+> En ambos codigos utilizamos multiplexación para permitirnos encender los leds de los dos displays a través de la misma conexión de cables.
+> ![image]()
+
 ##  :sunflower: Proyecto Parte Dos: Contador + Interruptor deslizante(SWITCH)
 ![imagen](imagen/imagen_2023-10-18_161343051.png)
 
